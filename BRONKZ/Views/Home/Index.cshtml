@@ -1,7 +1,20 @@
 ﻿@{
+    @model List<Cities>;
     ViewData["Title"] = "Home Page";
+
 }
 
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+@foreach (var aa in Model)
+{
+ 
+        @aa.Id
+        @aa.Name
+  
+}
+
+
+<h2>@(DateTime.Now - (DateTime)ViewBag.start)</h2>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRONKZ", "BRONKZ\BRONKZ.csproj", "{C06E696F-E12F-4514-9BC9-E0E105B67356}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BRONKZ", "BRONKZ\BRONKZ.csproj", "{C06E696F-E12F-4514-9BC9-E0E105B67356}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LIBS", "LIBS\LIBS.csproj", "{9E4F2756-EF59-4BA4-84E5-B4ADC67179A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C06E696F-E12F-4514-9BC9-E0E105B67356}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C06E696F-E12F-4514-9BC9-E0E105B67356}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C06E696F-E12F-4514-9BC9-E0E105B67356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E4F2756-EF59-4BA4-84E5-B4ADC67179A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E4F2756-EF59-4BA4-84E5-B4ADC67179A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E4F2756-EF59-4BA4-84E5-B4ADC67179A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4F2756-EF59-4BA4-84E5-B4ADC67179A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
