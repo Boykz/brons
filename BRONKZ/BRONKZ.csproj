@@ -11,11 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Views\" />
-    <Folder Include="Areas\Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\LIBS\LIBS.csproj" />
   </ItemGroup>
 

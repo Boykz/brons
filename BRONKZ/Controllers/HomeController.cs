@@ -20,12 +20,8 @@ namespace BRONKZ.Controllers
             memoryCache = caching;           
         }      
          
-        public IActionResult Index()
-        {
-            // ImageDraw img = new ImageDraw();
-            // img.Draw();
-            
-            ViewBag.start = DateTime.Now;
+        public IActionResult Welcome()
+        {                       
             List<Cities> cits = getCacheData<List<Cities>>(ShareClass.cities);
             return View(cits);
              

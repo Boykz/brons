@@ -1,0 +1,14 @@
+﻿@{
+    @model List<Cities>;
+    ViewData["Title"] = "Home Page";
+
+}
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+@foreach (var aa in Model)
+{
+ 
+        @aa.Id
+        @aa.Name
+  
+}
