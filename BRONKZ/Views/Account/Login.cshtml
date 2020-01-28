@@ -1,0 +1,14 @@
+﻿@model BRONKZ.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+<form asp-action="ExternalLogin" method="post" asp-route-returnUrl="@Model.returnUrl">
+    <div>
+        @foreach (var provider in Model.ExternalLogins)
+        {
+            <button type="submit" title="Войти через Google аккаунт" class="btn btn-primary" name="provider" value="@provider.Name">@provider.DisplayName</button>
+        }
+    </div>
+</form>
