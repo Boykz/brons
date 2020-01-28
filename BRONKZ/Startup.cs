@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
@@ -36,8 +37,31 @@ namespace BRONKZ
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connection));
             services.AddMemoryCache();
-            //services.AddAuthentication().AddGoogle(options =>
-           // new "AIzaSyA1J2mqddqswrYnLfp9A6K8XMY9QWyLAus")
+            services.AddIdentity<Users, IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
+              .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings  
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 3;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequiredUniqueChars = 1;
+
+                // options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
+                //options.Lockout.MaxFailedAccessAttempts = 1;
+                // options.Lockout.AllowedForNewUsers = true;
+            });
+
+
+            services.AddAuthentication().AddGoogle(options =>
+            {
+                options.ClientId = "1057539163534-jgorlfhr4bnra9ag5qsf8omgapg0b7o3.apps.googleusercontent.com";
+                options.ClientSecret = "jRBl3t69x1mezCHlQ_qUN5ob";
+            }
+            );
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

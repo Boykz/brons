@@ -8,6 +8,7 @@ namespace BRONKZ.Models
 {
     public class Users : IdentityUser
     {
-
+        public string email { get; set; }
+        public string password { get; set; }
     }
 }
